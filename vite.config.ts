@@ -7,7 +7,7 @@ import { defineConfig } from "vite";
 const plugins = [react(), tailwindcss(), jsxLocPlugin()];
 
 export default defineConfig({
-  base: process.env.NODE_ENV === 'production' ? '/dermage-analytics/' : '/',
+  base: process.env.NODE_ENV === 'production' ? '/Hackaton-/' : '/',
   plugins,
   resolve: {
     alias: {
