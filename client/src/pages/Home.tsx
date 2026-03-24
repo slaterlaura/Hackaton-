@@ -24,24 +24,24 @@ export default function Home() {
     <div className="min-h-screen bg-white">
       {/* Header */}
       <header className="sticky top-0 z-50 bg-white border-b border-gray-100">
-        <div className="container mx-auto px-4 py-8">
-          <div className="flex items-center justify-between">
-            <div>
-              <h1 className="text-4xl font-bold text-gray-900" style={{color: '#00473F'}}>Dermage Analytics</h1>
-              <p className="text-gray-600 mt-2">Análise Estratégica de Recompra e Segmentação de Clientes</p>
+        <div className="container mx-auto px-4 py-3 sm:py-6">
+          <div className="flex items-center justify-between flex-wrap gap-y-2">
+            <div className="min-w-0 mr-3">
+              <h1 className="text-xl sm:text-3xl font-bold text-gray-900 leading-tight" style={{color: '#00473F'}}>Dermage Analytics</h1>
+              <p className="text-gray-600 mt-1 text-xs sm:text-sm hidden sm:block">Análise Estratégica de Recompra e Segmentação de Clientes</p>
             </div>
-            <div className="text-right">
-              <Badge className="px-4 py-2 text-sm font-semibold" style={{backgroundColor: '#FF8400', color: 'white'}}>Datathon Girls in Tech</Badge>
+            <div className="flex-shrink-0">
+              <Badge className="px-2 py-1 sm:px-4 sm:py-2 text-xs sm:text-sm font-semibold whitespace-nowrap" style={{backgroundColor: '#FF8400', color: 'white'}}>Datathon Girls in Tech</Badge>
             </div>
           </div>
         </div>
       </header>
 
       {/* Main Content */}
-      <main className="container mx-auto px-4 py-12">
+      <main className="container mx-auto px-4 py-6 sm:py-12">
         {/* Executive Summary */}
-        <section className="mb-16 pt-8">
-          <h2 className="text-3xl font-bold mb-8" style={{color: '#00473F'}}>Resumo Executivo</h2>
+        <section className="mb-8 sm:mb-16 pt-4 sm:pt-8">
+          <h2 className="text-xl sm:text-3xl font-bold mb-4 sm:mb-8" style={{color: '#00473F'}}>Resumo Executivo</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="p-6 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow" style={{borderLeftWidth: '4px', borderLeftColor: '#FF8400'}}>
               <div className="flex items-center gap-3 mb-4">
@@ -83,26 +83,26 @@ export default function Home() {
 
         {/* Tabs for Analysis */}
         <Tabs defaultValue="recompra" className="w-full">
-          <TabsList className="grid w-full grid-cols-6 lg:grid-cols-6 mb-8 bg-gray-100 p-1 rounded-lg">
-            <TabsTrigger value="recompra" className="text-xs sm:text-sm rounded data-[state=active]:bg-white data-[state=active]:text-orange-600">Recompra</TabsTrigger>
-            <TabsTrigger value="produtos" className="text-xs sm:text-sm rounded data-[state=active]:bg-white data-[state=active]:text-orange-600">Produtos</TabsTrigger>
-            <TabsTrigger value="segmentacao" className="text-xs sm:text-sm rounded data-[state=active]:bg-white data-[state=active]:text-orange-600">Segmentação</TabsTrigger>
-            <TabsTrigger value="canal" className="text-xs sm:text-sm rounded data-[state=active]:bg-white data-[state=active]:text-orange-600">Canal/Região</TabsTrigger>
-            <TabsTrigger value="sazonalidade" className="text-xs sm:text-sm rounded data-[state=active]:bg-white data-[state=active]:text-orange-600">Sazonalidade</TabsTrigger>
-            <TabsTrigger value="recomendacoes" className="text-xs sm:text-sm rounded data-[state=active]:bg-white data-[state=active]:text-orange-600">Recomendações</TabsTrigger>
+          <TabsList className="grid w-full grid-cols-3 sm:grid-cols-6 mb-6 sm:mb-8 bg-gray-100 p-1 rounded-lg h-auto">
+            <TabsTrigger value="recompra" className="text-xs rounded py-2 data-[state=active]:bg-white data-[state=active]:text-orange-600">Recompra</TabsTrigger>
+            <TabsTrigger value="produtos" className="text-xs rounded py-2 data-[state=active]:bg-white data-[state=active]:text-orange-600">Produtos</TabsTrigger>
+            <TabsTrigger value="segmentacao" className="text-xs rounded py-2 data-[state=active]:bg-white data-[state=active]:text-orange-600">Segmentação</TabsTrigger>
+            <TabsTrigger value="canal" className="text-xs rounded py-2 data-[state=active]:bg-white data-[state=active]:text-orange-600">Canal/Região</TabsTrigger>
+            <TabsTrigger value="sazonalidade" className="text-xs rounded py-2 data-[state=active]:bg-white data-[state=active]:text-orange-600">Sazonalidade</TabsTrigger>
+            <TabsTrigger value="recomendacoes" className="text-xs rounded py-2 data-[state=active]:bg-white data-[state=active]:text-orange-600">Recomendações</TabsTrigger>
           </TabsList>
 
           {/* 1. Perfil de Recompra */}
           <TabsContent value="recompra" className="space-y-6">
             <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
-              <div className="p-8" style={{borderBottomWidth: '1px', borderBottomColor: '#E5E7EB'}}>
+              <div className="p-4 sm:p-8" style={{borderBottomWidth: '1px', borderBottomColor: '#E5E7EB'}}>
                 <div className="flex items-center gap-3 mb-3">
                   <Target className="w-6 h-6" style={{color: '#FF8400'}} />
-                  <h2 className="text-2xl font-bold" style={{color: '#00473F'}}>Perfil de Recompra</h2>
+                  <h2 className="text-lg sm:text-2xl font-bold" style={{color: '#00473F'}}>Perfil de Recompra</h2>
                 </div>
                 <p className="text-gray-600">Qual o percentual de clientes que faz uma segunda compra? Em quanto tempo? Existe um período crítico?</p>
               </div>
-              <div className="p-8 space-y-6">
+              <div className="p-4 sm:p-8 space-y-6">
                 <div>
                   <h3 className="font-bold text-lg mb-4" style={{color: '#00473F'}}>Evolução de Clientes Novos</h3>
                   <img src={chartUrls.evolucao_clientes} alt="Evolução de Clientes Novos" className="w-full rounded-lg shadow-md" />
@@ -140,14 +140,14 @@ export default function Home() {
           {/* 2. Produto-Porta de Entrada */}
           <TabsContent value="produtos" className="space-y-6">
             <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
-              <div className="p-8" style={{borderBottomWidth: '1px', borderBottomColor: '#E5E7EB'}}>
+              <div className="p-4 sm:p-8" style={{borderBottomWidth: '1px', borderBottomColor: '#E5E7EB'}}>
                 <div className="flex items-center gap-3 mb-3">
                   <ShoppingCart className="w-6 h-6" style={{color: '#FF8400'}} />
-                  <h2 className="text-2xl font-bold" style={{color: '#00473F'}}>Produto-Porta de Entrada</h2>
+                  <h2 className="text-lg sm:text-2xl font-bold" style={{color: '#00473F'}}>Produto-Porta de Entrada</h2>
                 </div>
                 <p className="text-gray-600">Quais famílias de produto são mais compradas na primeira compra? Existe uma jornada de produto natural?</p>
               </div>
-              <div className="p-8 space-y-6">
+              <div className="p-4 sm:p-8 space-y-6">
                 <div>
                   <h3 className="font-bold text-lg mb-4" style={{color: '#00473F'}}>Top 5 Produtos por Receita</h3>
                   <img src={chartUrls.top5_produtos} alt="Top 5 Produtos" className="w-full rounded-lg shadow-md" />
@@ -185,14 +185,14 @@ export default function Home() {
           {/* 3. Segmentação de Clientes */}
           <TabsContent value="segmentacao" className="space-y-6">
             <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
-              <div className="p-8" style={{borderBottomWidth: '1px', borderBottomColor: '#E5E7EB'}}>
+              <div className="p-4 sm:p-8" style={{borderBottomWidth: '1px', borderBottomColor: '#E5E7EB'}}>
                 <div className="flex items-center gap-3 mb-3">
                   <Users className="w-6 h-6" style={{color: '#FF8400'}} />
-                  <h2 className="text-2xl font-bold" style={{color: '#00473F'}}>Segmentação de Clientes</h2>
+                  <h2 className="text-lg sm:text-2xl font-bold" style={{color: '#00473F'}}>Segmentação de Clientes</h2>
                 </div>
                 <p className="text-gray-600">Existem perfis de clientes com comportamentos distintos? Como cada grupo se comporta em termos de ticket, frequência e mix de produtos?</p>
               </div>
-              <div className="p-8 space-y-6">
+              <div className="p-4 sm:p-8 space-y-6">
                 <div>
                   <h3 className="font-bold text-lg mb-4" style={{color: '#00473F'}}>Distribuição de Clientes por Faixa de Receita</h3>
                   <img src={chartUrls.distribuicao_receita} alt="Distribuição de Receita" className="w-full rounded-lg shadow-md" />
@@ -234,14 +234,14 @@ export default function Home() {
           {/* 4. Canal e Região */}
           <TabsContent value="canal" className="space-y-6">
             <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
-              <div className="p-8" style={{borderBottomWidth: '1px', borderBottomColor: '#E5E7EB'}}>
+              <div className="p-4 sm:p-8" style={{borderBottomWidth: '1px', borderBottomColor: '#E5E7EB'}}>
                 <div className="flex items-center gap-3 mb-3">
                   <BarChart3 className="w-6 h-6" style={{color: '#FF8400'}} />
-                  <h2 className="text-2xl font-bold" style={{color: '#00473F'}}>Canal e Região</h2>
+                  <h2 className="text-lg sm:text-2xl font-bold" style={{color: '#00473F'}}>Canal e Região</h2>
                 </div>
                 <p className="text-gray-600">Há diferenças de recompra entre canais de venda ou regiões do Brasil?</p>
               </div>
-              <div className="p-8 space-y-6">
+              <div className="p-4 sm:p-8 space-y-6">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                   <div>
                     <img src={chartUrls.recompra_canal} alt="Recompra por Canal" className="w-full rounded-lg shadow-md" />
@@ -275,14 +275,14 @@ export default function Home() {
           {/* 5. Sazonalidade */}
           <TabsContent value="sazonalidade" className="space-y-6">
             <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
-              <div className="p-8" style={{borderBottomWidth: '1px', borderBottomColor: '#E5E7EB'}}>
+              <div className="p-4 sm:p-8" style={{borderBottomWidth: '1px', borderBottomColor: '#E5E7EB'}}>
                 <div className="flex items-center gap-3 mb-3">
                   <Calendar className="w-6 h-6" style={{color: '#FF8400'}} />
-                  <h2 className="text-2xl font-bold" style={{color: '#00473F'}}>Sazonalidade</h2>
+                  <h2 className="text-lg sm:text-2xl font-bold" style={{color: '#00473F'}}>Sazonalidade</h2>
                 </div>
                 <p className="text-gray-600">Existem períodos do ano com mais primeiras compras? E com mais recompras? Como a sazonalidade afeta diferentes famílias de produto?</p>
               </div>
-              <div className="p-8 space-y-6">
+              <div className="p-4 sm:p-8 space-y-6">
                 <div>
                   <img src={chartUrls.sazonalidade} alt="Sazonalidade" className="w-full rounded-lg shadow-md" />
                 </div>
@@ -315,14 +315,14 @@ export default function Home() {
           {/* 6. Recomendações */}
           <TabsContent value="recomendacoes" className="space-y-6">
             <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
-              <div className="p-8" style={{borderBottomWidth: '1px', borderBottomColor: '#E5E7EB'}}>
+              <div className="p-4 sm:p-8" style={{borderBottomWidth: '1px', borderBottomColor: '#E5E7EB'}}>
                 <div className="flex items-center gap-3 mb-3">
                   <Target className="w-6 h-6" style={{color: '#FF8400'}} />
-                  <h2 className="text-2xl font-bold" style={{color: '#00473F'}}>Recomendações Acionáveis</h2>
+                  <h2 className="text-lg sm:text-2xl font-bold" style={{color: '#00473F'}}>Recomendações Acionáveis</h2>
                 </div>
                 <p className="text-gray-600">Com base nos dados, que ações concretas a Dermage deveria tomar para aumentar a recompra?</p>
               </div>
-              <div className="p-8 space-y-6">
+              <div className="p-4 sm:p-8 space-y-6">
                 <div className="space-y-4">
                   <div className="p-6 rounded-lg border" style={{backgroundColor: '#F0F9F7', borderLeftWidth: '4px', borderLeftColor: '#FF8400'}}>
                     <h3 className="font-bold text-gray-900 mb-3 flex items-center gap-2" style={{fontSize: '1.125rem'}}>
