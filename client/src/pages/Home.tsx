@@ -83,16 +83,14 @@ export default function Home() {
 
         {/* Tabs for Analysis */}
         <Tabs defaultValue="recompra" className="w-full">
-          <div className="overflow-x-auto mb-6 sm:mb-8 -mx-4 px-4 sm:mx-0 sm:px-0">
-            <TabsList className="flex w-max sm:w-full sm:grid sm:grid-cols-6 bg-gray-100 p-1 rounded-lg h-auto min-w-full">
-              <TabsTrigger value="recompra" className="text-xs rounded py-2 flex-shrink-0 sm:flex-shrink data-[state=active]:bg-white data-[state=active]:text-orange-600">Recompra</TabsTrigger>
-              <TabsTrigger value="produtos" className="text-xs rounded py-2 flex-shrink-0 sm:flex-shrink data-[state=active]:bg-white data-[state=active]:text-orange-600">Produtos</TabsTrigger>
-              <TabsTrigger value="segmentacao" className="text-xs rounded py-2 flex-shrink-0 sm:flex-shrink data-[state=active]:bg-white data-[state=active]:text-orange-600">Segmentação</TabsTrigger>
-              <TabsTrigger value="canal" className="text-xs rounded py-2 flex-shrink-0 sm:flex-shrink data-[state=active]:bg-white data-[state=active]:text-orange-600">Canal/Região</TabsTrigger>
-              <TabsTrigger value="sazonalidade" className="text-xs rounded py-2 flex-shrink-0 sm:flex-shrink data-[state=active]:bg-white data-[state=active]:text-orange-600">Sazonalidade</TabsTrigger>
-              <TabsTrigger value="recomendacoes" className="text-xs rounded py-2 flex-shrink-0 sm:flex-shrink data-[state=active]:bg-white data-[state=active]:text-orange-600">Recomendações</TabsTrigger>
+          <TabsList className="grid grid-cols-3 sm:grid-cols-6 w-full bg-gray-100 p-1 rounded-lg h-auto mb-6 sm:mb-8">
+              <TabsTrigger value="recompra" className="text-xs rounded py-2 data-[state=active]:bg-white data-[state=active]:text-orange-600">Recompra</TabsTrigger>
+              <TabsTrigger value="produtos" className="text-xs rounded py-2 data-[state=active]:bg-white data-[state=active]:text-orange-600">Produtos</TabsTrigger>
+              <TabsTrigger value="segmentacao" className="text-xs rounded py-2 data-[state=active]:bg-white data-[state=active]:text-orange-600">Segmentação</TabsTrigger>
+              <TabsTrigger value="canal" className="text-xs rounded py-2 data-[state=active]:bg-white data-[state=active]:text-orange-600">Canal/Região</TabsTrigger>
+              <TabsTrigger value="sazonalidade" className="text-xs rounded py-2 data-[state=active]:bg-white data-[state=active]:text-orange-600">Sazonalidade</TabsTrigger>
+              <TabsTrigger value="recomendacoes" className="text-xs rounded py-2 data-[state=active]:bg-white data-[state=active]:text-orange-600">Recomendações</TabsTrigger>
             </TabsList>
-          </div>
 
           {/* 1. Perfil de Recompra */}
           <TabsContent value="recompra" className="space-y-6">
